@@ -19,7 +19,7 @@ function NavigationBar(props) {
     const location = useLocation()
     let origin1 = true
     console.log(location.pathname)
-    if (location.pathname === "/favourites" || location.pathname === "/visited") {
+    if (location.pathname === "/favourites" || location.pathname === "/visited" || location.pathname === "/") {
         origin1 = false
     }
 
