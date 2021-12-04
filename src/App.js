@@ -39,7 +39,6 @@ class App extends Component {
     this.removeFromFavourites = this.removeFromFavourites.bind(this)
     this.clearMoviesFromStorage = this.clearMoviesFromStorage.bind(this)
     this.runOnStart = this.runOnStart.bind(this)
-
     this.runOnStart()
   }
 
