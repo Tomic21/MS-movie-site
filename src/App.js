@@ -38,16 +38,10 @@ class App extends Component {
     this.handleGettingGenres = this.handleGettingGenres.bind(this)
     this.removeFromFavourites = this.removeFromFavourites.bind(this)
     this.clearMoviesFromStorage = this.clearMoviesFromStorage.bind(this)
-    this.runOnStart = this.runOnStart.bind(this)
-    this.runOnStart()
   }
 
 
   runOnStart() {
-    if (window.location.protocol != "http:") {
-      window.location.protocol = "http:";
-      window.location.reload();
-    }
   }
 
   componentDidMount() {
