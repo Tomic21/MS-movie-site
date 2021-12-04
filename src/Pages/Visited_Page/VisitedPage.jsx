@@ -23,7 +23,7 @@ function VisitedPage(props) {
         } catch (error) {
             return
         }
-
+        //getting single movie detailed data
         let moviesDataTemporary = []
         movies.forEach((movieId, index) => {
             props.getData(`movie/${movieId}`)

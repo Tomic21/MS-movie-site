@@ -2,7 +2,7 @@
 // e0d512f22b5823229e6f8aba260e1c20
 
 
-//LIBARIES
+//IMPORTING
 import React, { Component } from 'react';
 
 import {
@@ -40,15 +40,9 @@ class App extends Component {
     this.clearMoviesFromStorage = this.clearMoviesFromStorage.bind(this)
   }
 
-
-  runOnStart() {
-  }
-
-  componentDidMount() {
-  }
-
-
+  //method for fetching data for various components
   getData(urlData, aditionalData = "") {
+    //building url function
     function urlFactory() {
       let url = ""
       url = `${baseURL}${urlData}?api_key=${APIKEY}${aditionalData}`
@@ -68,6 +62,7 @@ class App extends Component {
       })
     )
   }
+  //getting genres and returning genre array for single movie
   handleGettingGenres(movie, returnFullArray = false) {
     return (this.getData("genre/movie/list")
       .then((response) => {
@@ -98,6 +93,7 @@ class App extends Component {
       }))
   }
   removeFromFavourites(movieId) {
+    //checking if item is stored iniside array and filtering array
     if ((window.localStorage.getItem("favourites") !== null)) {
       let parsedData = JSON.parse(window.localStorage.getItem("favourites"))
       let parsedDataArray = Array.from(parsedData)

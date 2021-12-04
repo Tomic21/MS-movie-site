@@ -5,7 +5,7 @@ import "./Style/movieInstance.css"
 
 
 
-
+//single movie component
 function MovieInstance(props) {
 
     const imageLink = `https://image.tmdb.org/t/p/w154/${props.movie.poster_path}`

@@ -38,8 +38,8 @@ function MoviePage(props) {
 
 
     useEffect(() => {
-        //checking if component should update manually
         let mainDataInstance = null
+        //getting single movie recomended and similar data
         props.getData(`movie/${movieId}`)
             .then((response) => {
                 return response.json()

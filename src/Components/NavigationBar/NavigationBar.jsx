@@ -18,13 +18,18 @@ function NavigationBar(props) {
     let moviesGlobal = []
     const location = useLocation()
     let origin1 = true
-    console.log(location.pathname)
+
+
+    //checking pathname 
     if (location.pathname === "/favourites" || location.pathname === "/visited" || location.pathname === "/") {
+        //if component should reload origin1 = true
         origin1 = false
     }
 
     useEffect(() => {
+        //checking if anything is inside input form
         if (search != "") {
+            //getting matches from input form
             props.getData("search/multi", `&language=en-US&query=${search}&page=1&include_adult=false`)
                 .then((response) => {
                     return response.json()
@@ -33,6 +38,7 @@ function NavigationBar(props) {
                     return Array.from(dataRaw.results)
                 })
                 .then(data => {
+                    //getting detailed info about each movie
                     return data.map(movie => {
                         return props.getData(`movie/${movie.id}`, "&language=en-US")
                             .then((response) => {
@@ -46,7 +52,7 @@ function NavigationBar(props) {
                     });
                 })
                 .then((responseArray) => {
-
+                    //setting movies to maped array each time something is being typed
                     responseArray.map(response => {
                         response.then((data) => {
                             if (data !== undefined) {
