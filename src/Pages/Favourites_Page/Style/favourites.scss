@@ -1,0 +1,96 @@
+.favourites__container {
+
+    .movies__container {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+
+        .one__movie__container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            .remove__from__favourites__button {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                display: block;
+                height: 45px;
+                width: 45px;
+                font-size: 2rem;
+                font-weight: 600;
+                opacity: .85;
+                border: none;
+                background: rgba(247, 42, 42, 0.685)
+            }
+
+            .remove__from__favourites__button:hover {
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+    .favourits__text {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        align-items: center;
+        min-height: 100px;
+
+        .title {
+            margin-left: 50px;
+            letter-spacing: 2px;
+            font-size: 2.5rem;
+        }
+
+        .clear__favourites {
+            margin-right: 50px;
+            font-size: 2rem;
+            font-weight: 400;
+            border: none;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.719);
+
+            &:hover {
+                cursor: rgba(255, 255, 255, 0.904)
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .favourites__container {
+
+        .movies__container {
+
+            .one__movie__container {
+
+                .remove__from__favourites__button {}
+
+                .remove__from__favourites__button:hover {}
+
+            }
+
+        }
+
+        .favourits__text {
+            flex-direction: column;
+
+            .title {
+                margin: 0;
+            }
+
+            .clear__favourites {
+                margin: 0;
+
+                &:hover {}
+            }
+        }
+    }
+
+
+
+}

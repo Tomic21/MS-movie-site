@@ -1,0 +1,91 @@
+.favourites__container .movies__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.favourites__container .movies__container .one__movie__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.favourites__container .movies__container .one__movie__container .remove__from__favourites__button {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  display: block;
+  height: 45px;
+  width: 45px;
+  font-size: 2rem;
+  font-weight: 600;
+  opacity: .85;
+  border: none;
+  background: rgba(247, 42, 42, 0.685);
+}
+
+.favourites__container .movies__container .one__movie__container .remove__from__favourites__button:hover {
+  cursor: pointer;
+}
+
+.favourites__container .favourits__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100px;
+}
+
+.favourites__container .favourits__text .title {
+  margin-left: 50px;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+}
+
+.favourites__container .favourits__text .clear__favourites {
+  margin-right: 50px;
+  font-size: 2rem;
+  font-weight: 400;
+  border: none;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.719);
+}
+
+.favourites__container .favourits__text .clear__favourites:hover {
+  cursor: rgba(255, 255, 255, 0.904);
+}
+
+@media screen and (max-width: 576px) {
+  .favourites__container .favourits__text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .favourites__container .favourits__text .title {
+    margin: 0;
+  }
+  .favourites__container .favourits__text .clear__favourites {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=favourites.css.map */

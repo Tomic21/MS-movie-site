@@ -1,0 +1,381 @@
+.top__part {
+    width: 100%;
+    height: auto;
+
+    .backposter__container {
+        height: 400px;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 100%;
+            width: 75%;
+            filter: blur(5px);
+        }
+    }
+
+
+
+    .info__container {
+        height: 400px;
+        width: 60%;
+        display: flex;
+        margin-left: 100px;
+        background: rgb(8, 8, 8);
+
+
+        .image__container {
+            position: relative;
+            width: 40%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .under__poster__container {
+                height: 100px;
+                width: 100%;
+                position: relative;
+                display: flex;
+
+                .runtime {
+                    position: absolute;
+                    transform: translateY(-100%);
+                    color: red;
+                    font-size: 1.5rem;
+                    opacity: .7;
+                    background: rgba(255, 255, 255, 0.349)
+                }
+
+                .poster__img {
+                    position: absolute;
+                    width: 70%;
+                    transform: translateY(-100%);
+                }
+
+                .stars {
+                    width: 60%;
+                    display: flex;
+
+                    .rating__container {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+
+                        .inside__stars {
+                            height: 50%;
+                            width: 100%;
+
+                            .star {
+                                width: 25px;
+                                height: 25px;
+                                margin-left: 10px;
+                                margin-top: 5px;
+                            }
+
+                        }
+
+                        .imdb__rating {
+                            font-size: 2rem;
+                            height: 50%;
+                            width: 100%;
+                            text-align: center;
+
+                            a {
+                                text-decoration: none;
+                                color: rgb(255, 255, 1);
+                                opacity: .8;
+                                transition: .5s ease-in-out 0s;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .add__to__favorites {
+                    width: 50px;
+                    height: 100%;
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 50px;
+                        width: 50px;
+                        background: black;
+                        transition: .2s ease-in-out;
+                    }
+
+                }
+            }
+        }
+
+        .text__info__container {
+            height: 100%;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-evenly;
+            align-items: center;
+            color: white;
+
+            .title__container {
+                width: 70%;
+                height: auto;
+
+                .title {
+                    font-size: 1.9rem;
+                    font-weight: 600;
+                    opacity: 1;
+                    letter-spacing: 1px;
+                    word-spacing: 2px;
+                    text-decoration: underline;
+                }
+
+                .text {
+                    font-size: 1.1rem;
+                    margin-top: 7px;
+                    opacity: .75;
+                    font-style: italic;
+                }
+            }
+
+            .credits__container {
+                width: 60%;
+                height: auto;
+
+                .title {
+                    font-size: 1.5rem;
+                    text-decoration: underline;
+                }
+
+                .text {
+                    opacity: .7;
+                    margin-top: 7px;
+                    font-style: italic;
+                }
+
+            }
+        }
+    }
+}
+
+.bottom__part {
+    margin-top: 100px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .bottom__part__text {
+        color: white;
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+
+    .recomended__container {
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+
+        .recomended {
+            margin: 0px 10px;
+        }
+    }
+
+    .similar__container {
+        flex-wrap: wrap;
+        height: auto;
+        width: auto;
+        display: flex;
+
+        .similar {
+            margin: 0px 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+
+    .top__part {
+        .info__container {
+            width: 75%;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .top__part {
+        .info__container {
+            width: 85%;
+            margin-left: 45px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 769px) {
+
+    .top__part {
+        .backposter__container {
+            img {
+                width: 100%;
+            }
+        }
+
+        .info__container {
+            width: 95%;
+            margin-left: 25px;
+            flex-direction: column;
+            height: auto;
+
+            .image__container {
+                width: 100%;
+
+                .under__poster__container {
+
+                    .runtime {
+                        left: 20%;
+                    }
+
+                    .poster__img {
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-100%);
+                    }
+
+
+
+                    .stars {
+                        width: 100%;
+                        min-height: 200px;
+
+                        .rating__container {
+                            width: 100%;
+
+
+                            .inside__stars {
+                                display: flex;
+                                justify-content: center;
+                                width: 100%;
+
+                                .star {}
+
+                            }
+
+                            .imdb__rating {
+                                height: 50px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+
+                    }
+
+                    .add__to__favorites {
+                        img {}
+                    }
+                }
+            }
+
+            .text__info__container {
+                background: rgb(37, 37, 37);
+                min-height: 400px;
+                width: 100%;
+
+                .title__container {
+                    width: 90%;
+                }
+
+                .credits__container {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .top__part {
+        .backposter__container {
+            img {
+                width: 100%;
+            }
+        }
+
+        .info__container {
+            width: 100%;
+            min-height: 800px;
+            margin-left: 0px;
+
+            .image__container {
+                width: 100%;
+
+                .under__poster__container {
+
+                    .poster__img {
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-100%);
+                    }
+
+                    .stars {
+                        width: 100%;
+                        min-height: 200px;
+
+                        .rating__container {
+                            width: 100%;
+
+
+                            .inside__stars {
+                                display: flex;
+                                justify-content: center;
+                                width: 100%;
+
+
+                            }
+
+                            .imdb__rating {
+                                height: 50px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                        }
+
+                    }
+
+                    .add__to__favorites {
+                        img {}
+                    }
+                }
+            }
+
+            .text__info__container {
+                background: rgb(14, 14, 14);
+                min-height: 400px;
+                width: 100%;
+
+                .title__container {
+                    width: 90%;
+                }
+
+                .credits__container {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

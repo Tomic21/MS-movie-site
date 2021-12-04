@@ -1,0 +1,120 @@
+.movie__instance__container {
+  width: 200px;
+  height: 460px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: all .5s ease-in-out 0s;
+  transition: all .5s ease-in-out 0s;
+}
+
+.movie__instance__container:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.movie__instance__container .movie__image__container {
+  position: relative;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.movie__instance__container .movie__image__container::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  background: white;
+  top: 0;
+  left: -20%;
+  z-index: 1;
+  opacity: 0;
+}
+
+@-webkit-keyframes instanceAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(400%);
+            transform: translateX(400%);
+  }
+}
+
+@keyframes instanceAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(400%);
+            transform: translateX(400%);
+  }
+}
+
+.movie__instance__container .movie__image__container:hover::before {
+  -webkit-animation: instanceAnim .3s ease-in-out;
+          animation: instanceAnim .3s ease-in-out;
+}
+
+.movie__instance__container .movie__image__container .movie__img {
+  border-radius: 15px;
+  width: 200px;
+  position: relative;
+}
+
+.movie__instance__container .movie__image__container .movie__rating__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  color: black;
+  font-weight: 600;
+}
+
+.movie__instance__container .movie__text__container {
+  text-decoration: none;
+}
+
+.movie__instance__container .movie__text__container .title {
+  color: white;
+  font-weight: 200;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.movie__instance__container .movie__text__container .year {
+  color: white;
+  font-size: 1.7rem;
+  text-decoration: none;
+  opacity: .85;
+}
+
+.movie__instance__container .movie__text__container span {
+  color: white;
+  opacity: .7;
+}
+/*# sourceMappingURL=movieInstance.css.map */
